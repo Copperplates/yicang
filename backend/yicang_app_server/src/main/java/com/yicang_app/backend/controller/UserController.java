@@ -1,7 +1,7 @@
 package com.yicang_app.backend.controller;
 
 import com.yicang_app.backend.constant.R;
-import com.yicang_app.backend.entity.user.UserInfo;
+import com.yicang_app.backend.entity.user.*;
 import com.yicang_app.backend.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class  UserController {
     @Autowired
     private UserService userService;
 
@@ -68,6 +68,24 @@ public class UserController {
     public R getUserInfo(@RequestBody UserInfo userInfo) {
         return userService.getUserInfo(userInfo);
     }
+
+    /**
+     * 获取用户列表
+     * @return
+     */
+    @GetMapping("/userList")
+    public R getUserList() { return userService.getUserList(); }
+
+    @PostMapping("/novelCollectionAudit")
+    public R setNovelCollectionAudit(@RequestBody UserCollectionNovel userCollectionNovel) {
+        return userService.setNovelCollectionAudit(userCollectionNovel);
+    }
+
+    @PostMapping("/paintingCollectionAudit")
+    public R setPaintingCollectionAudit(@RequestBody UserCollectionPainting userCollectionPainting) {
+        return userService.setPaintingCollectionAudit(userCollectionPainting);
+    }
+
     /**
      * 获取用户小说藏品
      * @param userInfo 用户信息
