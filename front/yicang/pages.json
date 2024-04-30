@@ -1,0 +1,81 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/novel/novel",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/novel/detail",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/novel/continue",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/draw/draw",
+			"style": {
+				"titleNView": false
+			}
+		},
+		{
+			"path": "pages/center/center",
+			"style": {
+				"titleNView": false
+				// "navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/draw/detail",
+			"style": {
+				"titleNView": false
+			}
+        },
+		{
+			"path": "pages/draw/buy",
+			"style": {
+				"titleNView": false
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#03e9f4",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "社区"
+		}, {
+			"pagePath": "pages/draw/draw",
+			"text": "绘画"
+		}, {
+			"pagePath": "pages/novel/novel",
+			"text": "小说"
+		}, {
+			"pagePath": "pages/center/center",
+			"text": "个人中心"
+		}]
+	}
+}
