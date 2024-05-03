@@ -108,6 +108,48 @@ public class UserServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> imple
     }
 
     @Override
+    public R<List<UserInfo>> getUserList() {
+        LambdaQueryWrapper<UserInfo> queryWrapper = new LambdaQueryWrapper<>();
+        List<UserInfo> UserList = userMapper.selectList(queryWrapper);
+        if (UserList == null) {
+            return R.error(ResultCode.USER_NOT_EXIST, null);
+        }
+        return R.success(ResultCode.SUCCESS, UserList);
+    }
+
+    @Override
+    public R setNovelCollectionAudit(UserCollectionNovel userCollectionNovel) {
+        int id = userCollectionNovel.getId();
+        LambdaQueryWrapper<UserCollectionNovel> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(UserCollectionNovel::getId, id);
+        UserCollectionNovel temp = userCollectionNovelMapper.selectOne(queryWrapper);
+        if (temp == null) {
+            log.info("交易不存在");
+            return R.error(ResultCode.NOVEL_COLLECTION_EMPTY, null);
+        }
+        temp.setAudit(userCollectionNovel.getAudit());
+        userCollectionNovelMapper.updateById(temp);
+        log.info("用户修改成功");
+        return R.success(ResultCode.SUCCESS, null);
+    }
+
+    @Override
+    public R setPaintingCollectionAudit(UserCollectionPainting userCollectionPainting) {
+        int id = userCollectionPainting.getId();
+        LambdaQueryWrapper<UserCollectionPainting> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(UserCollectionPainting::getId, id);
+        UserCollectionPainting temp = userCollectionPaintingMapper.selectOne(queryWrapper);
+        if (temp == null) {
+            log.info("交易不存在");
+            return R.error(ResultCode.PAINTING_COLLECTION_EMPTY, null);
+        }
+        temp.setAudit(userCollectionPainting.getAudit());
+        userCollectionPaintingMapper.updateById(temp);
+        log.info("用户修改成功");
+        return R.success(ResultCode.SUCCESS, null);
+    }
+
+    @Override
     public R changePassword(UserInfo userInfo) {
         String username = userInfo.getUsername();
         LambdaQueryWrapper<UserInfo> queryWrapper = new LambdaQueryWrapper<>();

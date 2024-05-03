@@ -26,4 +26,5 @@ public class Novel implements Serializable {
     private LocalDateTime updateTime;
     private String writer;
     private int price;
+    private int audit;
 }

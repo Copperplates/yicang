@@ -85,4 +85,14 @@ public interface UserService extends IService<UserInfo> {
      * @return R
      */
     R getUserInfo(UserInfo userInfo);
+
+    /**
+     * 获取用户列表
+     * @return R
+     */
+    R getUserList();
+
+    R setNovelCollectionAudit(UserCollectionNovel userCollectionNovel);
+
+    R setPaintingCollectionAudit(UserCollectionPainting userCollectionPainting);
 }

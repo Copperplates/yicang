@@ -15,11 +15,12 @@ import java.time.LocalDateTime;
 @Data
 public class UserCollectionPainting implements Serializable {
     @TableField(fill = FieldFill.INSERT)
-    private String boughtTime;
+    private LocalDateTime boughtTime;
     private int id;
     private String username;
     private Long paintingId;
-    private LocalDateTime paintingName;
+    private String paintingName;
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime updateTime;
+    private int audit;
 }

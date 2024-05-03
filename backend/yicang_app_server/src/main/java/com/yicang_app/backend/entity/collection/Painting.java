@@ -26,4 +26,5 @@ public class Painting implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
     private int price;
+    private int audit;
 }

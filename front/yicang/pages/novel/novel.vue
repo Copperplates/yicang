@@ -22,7 +22,7 @@
 						<span class="icon-wrapper">
 							<image src="../../static/icon1.png" class="icon" />
 						</span>
-						<span class="label">阅读</span>
+						<span class="label">阅读</span >
 					</button>
 					<button @click="toNewPageFn('/pages/novel/continue');">
 						<span class="icon-wrapper">
@@ -63,7 +63,7 @@
 			</div>
 			<div class="card-right">
 				<h1>千骗万化</h1>
-				<p>我见过那些腰缠万贯的人，一夜之间倾家荡产还见过那些权势在手的人，被人玩弄于股掌之中，含恨自尽官为白，匪为黑......</p>
+				<p>我见过那些腰缠万贯的人，一夜之间倾家荡产还见过那些权势在手的人，被人玩弄于股掌之中...</p>
 				<div class="button-wrapper">
 					<button>
 						<span class="icon-wrapper">
