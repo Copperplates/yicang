@@ -47,14 +47,14 @@
 		<div class="blur-divider">
 			<div class="blur-divider-line"></div>
 			<div class="blur-divider-icon">
-				<image src="../../static/审核.png" />
-				<span style="font-size: 12px;
+				<image src="" />
+				<!-- <span style="font-size: 12px;
 font-weight: 400;
 letter-spacing: 0px;
 line-height: 0px;
 color: rgba(80, 80, 80, 1);
-text-align: right;
-vertical-align: top;">解锁更多</span>
+text-align: center;
+vertical-align: top;">解锁更多</span> -->
 			</div>
 			<div class="blur-divider-line"></div>
 		</div>
@@ -324,15 +324,15 @@ vertical-align: top;">解锁更多</span>
 			}
 
 			.blur-divider-icon {
-				margin: 0 20px;
+				margin: 0 0px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-
+				
 				image {
 					width: 24px;
 					height: 24px;
-					margin-right: 10px;
+					margin-right: 0px;
 				}
 
 				span {

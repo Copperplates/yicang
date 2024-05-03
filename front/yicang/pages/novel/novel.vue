@@ -208,7 +208,8 @@
 			margin-bottom: 5vh;
 			width: 90%;
 			margin-left: 5%;
-
+			
+			// margin-top: 5%;
 			.card-left {
 				flex: 4;
 				display: flex;
@@ -297,7 +298,6 @@
 					}
 				}
 			}
-
 
 
 

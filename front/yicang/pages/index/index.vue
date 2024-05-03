@@ -89,6 +89,7 @@
 					style="width: 30%; background-image: url('https://img.js.design/assets/img/6423def59b06204f6ad661f1.png#b7411bc65ed267448616ccedffc8dc30'); background-size: cover; background-position: center; height: 200px;">
 					<div style="display: flex; justify-content: space-between;
 						position: absolute;
+						
 						top: 24vh;
 						width: 90vw;
 						font-size: 14px;
